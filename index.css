@@ -1,0 +1,157 @@
+/* {} */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+/* font-family: "Fraunces", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+/* RESEAT */
+*  {
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+} 
+
+img {
+    width: 100%;
+}
+
+h2, p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+   font-family: "Fraunces", serif;
+}
+
+/* PARA EL RESPONSIVE */
+.siMovil{
+    display: none;
+}
+.noMovil{
+    display: flex;
+}
+
+/* MI CARD: GENERAL */
+.card {
+    margin: 13em 0em;
+}
+.card__div {
+    max-width: 650px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+
+/* MI CARD: SOBRE LA IMAGEN */
+.card__content__picture{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.card__content__picture img{
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* MI CARD: SOBRE EL TEXTO */
+.card__content__text {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    justify-content: center;
+    align-items: start;
+    padding: 1em 2em;
+    margin: 1em;
+}
+
+.card__content__text h2{
+    font-size: 15px;
+    letter-spacing: 0.25em;
+    color: rgb(92, 92, 92);
+}
+
+.card__content__text h1{
+    font-size: 30px;
+    font-weight: 900;
+    
+}
+.spanOne {
+    font-family: "Fraunces", serif;
+    font-size: 35px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 600;
+}
+.spanTwo {
+    text-decoration: line-through;
+    color: rgb(92, 92, 92);
+}
+
+.card__content__text__div {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+
+    padding: 1em 0em;
+}
+
+/* MI CARD: BOTON*/
+
+.btn:hover {
+    background-color:  hsl(158, 36%, 27%);
+}
+
+.btn {
+    background-color:  hsl(158, 36%, 37%);
+    display: flex;
+    gap: 1em;
+    padding: 1em 0.5em;
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 750;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1060px) {
+    .siMovil{
+        display: flex;
+    }
+    .noMovil{
+        display: none;
+    }
+
+    .card__div {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .card__content__picture img{
+        border-radius: 20px 20px 0px 0px;
+    }
+}
+
+@media (max-width:700px) {
+
+    .card__div {
+        max-width: 300px;
+    }
+    .card__content__text {
+        padding: 0.5em 1.5em;
+    }
+}
